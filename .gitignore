@@ -1,0 +1,7 @@
+_Store
+node_modules/
+public/dist/
+*.log
+*.log
+*.pid
+
