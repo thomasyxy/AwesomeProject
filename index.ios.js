@@ -18,7 +18,10 @@ export default class AwesomeProject extends Component {
       <View style={{flexDirection: 'row', height: 100, padding: 20}}>
         <View style={{backgroundColor: 'blue', flex: 0.3}} />
         <View style={{backgroundColor: 'red', flex: 0.5}} />
-        <MyCustomComponent {...customProps} />
+        <FlatList
+          data={[{key: 'a'}, {key: 'b'}]}
+          renderItem={({item}) => <Text>{item.key}</Text>}
+        />
       </View>
     );
   }
