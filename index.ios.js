@@ -11,16 +11,22 @@ import {
   Text,
   View
 } from 'react-native';
-import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <GoogleSigninButton
-        style={{width: 48, height: 48}}
-        size={GoogleSigninButton.Size.Icon}
-        color={GoogleSigninButton.Color.Dark}
-        onPress={this._signIn.bind(this)}/>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.ios.js
+        </Text>
+        <Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        </Text>
+      </View>
     );
   }
 }
