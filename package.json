@@ -3,7 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"start": "react-native start",
+		"start:android": "concurrently -r 'react-native run-android'",
+		"start:android:no-packager": "react-native run-android --no-packager",
+		"start:ios": "concurrently -r 'react-native run-ios'",
+		"start:ios:no-packager": "react-native run-ios --no-packager",
 		"test": "jest"
 	},
 	"dependencies": {
@@ -11,8 +15,14 @@
 		"react-native": "0.50.4"
 	},
 	"devDependencies": {
+		"babel-eslint": "^8.0.2",
 		"babel-jest": "21.2.0",
-		"babel-preset-react-native": "4.0.0",
+		"babel-plugin-module-resolver": "^3.0.0",
+		"babel-plugin-transform-inline-environment-variables": "^0.2.0",
+		"babel-preset-flow": "^6.23.0",
+		"babel-preset-react-native": "^4.0.0",
+		"concurrently": "^3.5.1",
+		"flow-bin": "^0.59.0",
 		"jest": "21.2.1",
 		"react-test-renderer": "16.0.0"
 	},
